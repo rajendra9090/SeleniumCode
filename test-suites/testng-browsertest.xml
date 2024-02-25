@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="LambdaTest ecommerce playground website test suite " parallel="tests">
+    <test name="Web Automation Demo tests with Playwright" parallel="methods">
+        <classes>
+            <class name="io.github.mfaisalkhatri.tests.PlaywrightDemoTests">
+                <methods>
+                    <include name="testOnChromeHeadless"/>
+                    <include name="testOnChrome"/>
+                    <include name="testOnFirefoxHeadless"/>
+                    <include name="testOnFirefox"/>
+                    <include name="testOnChromeSlowMo"/>
+                    <include name="testOnFirefoxSlowMo"/>
+                    <include name="testOnEdge"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Refactored web automation test with Playwright on Chrome" enabled="false">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="io.github.mfaisalkhatri.tests.RefactoredPlaywrightTests">
+                <methods>
+                    <include name="websiteTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Refactored web automation test with Playwright on Firefox" enabled="false">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="io.github.mfaisalkhatri.tests.RefactoredPlaywrightTests">
+                <methods>
+                    <include name="websiteTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Refactored web automation test with Playwright on Edge" enabled="false">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="io.github.mfaisalkhatri.tests.RefactoredPlaywrightTests">
+                <methods>
+                    <include name="websiteTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite> <!-- Suite -->
